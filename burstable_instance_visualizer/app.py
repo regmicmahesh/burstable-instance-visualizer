@@ -178,9 +178,17 @@ while True:
     )
 
     if earned_credit >= spent_credit:
-        overall_change.write(f"Last Change: +{earned_credit-spent_credit:.5f}")
+        overall_change.write(f"""
+        **Last Change**: +{earned_credit-spent_credit:.5f} (Earned)
+
+        **Accrued Credit**: {accrued_credit:.5f}
+        """)
     else:
-        overall_change.write(f"Last Change: -{spent_credit-earned_credit:.5f}")
+        overall_change.write(f"""
+        **Last Change**: -{spent_credit-earned_credit:.5f} (Spent)
+
+        **Accrued Credit**: {accrued_credit:.5f}
+        """)
 
     accrued_credit_chart_container.line_chart(
         data[["accrued_credit"]],
