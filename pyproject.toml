@@ -1,0 +1,16 @@
+[project]
+name = "burstable-instance-visualizer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.2.2",
+    "pandas>=2.2.3",
+    "streamlit>=1.41.1",
+]
+
+[dependency-groups]
+dev = [
+    "watchdog>=6.0.0",
+]
